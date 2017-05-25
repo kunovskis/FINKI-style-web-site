@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: linear-gradient(to bottom right, lightblue, white, lightblue);
+            margin: 0;
+        }
+        #top{
+            width: 100%;
+            height: 30px;
+            background-color: black;
+        }
+        #eden{
+            width: 100%;
+            padding-bottom: 3%;
+            background-color: gray;
+        }
+        #naslov{
+            text-align: center;
+            font-size: 40px;
+            font-style: italic;
+            color: red;
+            padding-top: 40px;
+        }
+        #slika1{
+            margin-left: 10%;
+            margin-top: 3%;
+            position: relative;
+        }
+        #s1{
+            width: 60%;
+        }
+        #slika1 h2 {
+            position: absolute;
+            top: 25%;
+            left: 0;
+            font-size: 100%;
+            width: 50%;
+        }
+        #slika1 h2 span {
+            color: white;
+            font: bold 20px/40px Helvetica, Sans-Serif;
+            letter-spacing: -1px;
+            background: rgb(0, 0, 0); /* fallback color */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+        #dva{
+            background-color: white;
+            padding-top: -8%;
+        }
+        #n2{
+            display: none;
+        }
+        #n3{
+            display: none;
+        }
+        #s2{
+            width: 20%;
+            margin-bottom: 25%;
+            margin-left: 5%;
+        }
+        #s3{
+            width: 20%;
+            height: 50%;
+            margin-left: -20.3%;
+            margin-bottom: 5%;
+        }
+        #ss1, #ss2, #ss3{
+            margin-top: 8%;
+            width: 23%;
+            margin-left: 7.75%;
+        }
+        #p1, #p2, #p3{
+            display: none;
+            font-size: 50px;
+            color: red;
+            margin-top: -26%;
+            position: absolute;
+            width: 22.5%;
+            left: 8%;
+            color: white;
+            font: bold 20px/40px Helvetica, Sans-Serif;
+            letter-spacing: -1px;
+            background: rgb(0, 0, 0); /* fallback color */
+            background: rgba(0, 80, 255, 0.5);
+        }
+        #p2 {
+            left: 39%;
+        }
+        #p3{
+            left: 70%;
+        }
+        #tri{
+
+
+        }
+        form{
+            margin-left: 70%;
+            margin-top: -5%;
+        }
+        #desc{
+            margin-top: 5%;
+            margin-left: 20%;
+            margin-right: 40%;
+
+        }
+        #cetiri{
+            background: lightcyan;
+            padding-bottom: 5%;
+
+
+        }
+        #contact{
+            padding-top: 2%;
+            margin-left: 20%;}
+        #map{
+            margin-left: 65%;
+        }
+
+
+    </style>
+</head>
+<body onload="startTimer()">
+    <div id="top"></div>
+    <div id="eden">
+    <div id="naslov">
+        OVDE E NASLOVOT
+    </div>
+        <div id="slika1">
+        <img src="random-picture-12.png" id="s1">
+
+        <h2 id="n1"><span> OVA E NASLOV 1:<br/> KRATOK OPIS ZA 1</span></h2>
+        <h2 id="n2"><span> OVA E NASLOV 2:<br/> KRATOK OPIS ZA 2</span></h2>
+        <h2 id="n3"><span> OVA E NASLOV 3:<br/> KRATOK OPIS ZA 3</span></h2>
+
+        <img src="slika2.jpg" onclick="display1()" id="s2">
+
+        <img src="slika3.jpg" onclick="display2()" id="s3">
+        </div>
+    </div>
+    <div id="dva">
+        <img src="Nastan1.jpg" id="ss1">
+        <img src="Nastan2.jpg" id="ss2">
+        <img src="Nastan3.jpg" id="ss3">
+        <h1 id="p1">
+            Безбедносно тестирање на ФИНКИ
+        </h1>
+        <h1 id="p2">
+            Отворени денови на ФИНКИ
+        </h1>
+        <h1 id="p3">
+            Ден на Европа
+        </h1>
+    </div>
+    <div id="tri">
+        <div id="desc">
+            Letna Shkola <br>
+            Pork drumstick turkey fugiat. Trip-tip elit turucken pork chop in. Swine short ribs meatball irure bacon nulla
+            pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short
+            rivs minim salami nulla nostrud pastrami.
+
+        </div>
+        <form action="action_page.php">
+            Име и Презиме:<br>
+            <input type="text" name="firstname" required=""><br>
+            e-mail:<br>
+            <input type="text" name="email" required=""><br>
+            Зошто сакате да присустувате во Летната Школа?<br>
+            <textarea name="message" cols="42" rows="9" required=""></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+
+    </div>
+    <div id="cetiri">
+        <div id="contact">
+            Контакт:<br>
+            contact@finki.ukim.mk
+        </div>
+
+        <div id="map">
+            <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBIZxGn97jRp3Oh_THlngIbKV5zqbGX7Cs&?v=3.exp'></script>
+            <div style='overflow:hidden;height:300px;width:450px;'><div id='gmap_canvas' style='height:300px;width:450px;'></div><div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div><div><small><a href="https://termsofusegenerator.net">terms of use generator</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+            <script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(42.0047685,21.409779999999955),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(42.0047685,21.409779999999955)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Руѓер Бошковиќ 16, Skopje, Macedonia<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>
+
+
+
+    </div>
+
+    <script src="js.js"></script>
+
+
+</body>
+</html>

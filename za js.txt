@@ -1,0 +1,104 @@
+﻿var app=angular.module('single-page-app',['ngRoute']);
+app.config(function($routeProvider){
+    $routeProvider
+        .when('/',{
+            templateUrl: 'home.html'
+        })
+        .when('/javas',{
+            templateUrl: 'javas.html'
+        })
+        .when('/php',{
+            templateUrl: 'php.html'
+        })
+        .when('/prijava',{
+            templateUrl: 'prijava.html'
+        })
+        .when('/pusteno',{
+            templateUrl: 'pusteno.html',
+            controller: 'ctrl'
+        })
+});
+
+Ова е една од главните функции во AngularJS и се користи за лоадирање на темплејти. Принципот на работење е сличен со линкови, меѓутоа за разлика од линковите не се отвора нова страна, туку на самата страна само доаѓа до промена на темплејт. Промената на темплајтите се прави прекува навигацискиот бар во сегментот за Летна школа, и притоа <div ng-view> го лоадира соодветниот темплејт, кој сам по себе е HTML документ. 
+
+app.controller('cfgController',function($scope, $location, $anchorScroll){
+
+    $scope.scrollTo = function(id) {
+        var old = $location.hash();
+        $location.hash(id);
+        $anchorScroll();
+        $location.hash(old);
+    }
+});
+
+Поради начинот на кој што работат темплејтите во AngularJS, се појавува проблем при примена на anchor линковите. Затоа е применета оваа функција, која ја има истата функционалност. Се користи за брзо шетање низ страната преку навигацискиот бар на врвот од страната, и стрелката од десната страна. Исто така специфично е .location(old), која го задржува истиот темплејт кој веќе беше лоадиран на страната.
+
+document.getElementById("ss1").onmouseover = function() {mouseOver1()};
+document.getElementById("ss1").onmouseout = function() {mouseOut1()};
+document.getElementById("p1").onmouseover = function() {mouseOver1()};
+document.getElementById("p1").onmouseout = function() {mouseOut1()};
+
+function mouseOver1() {
+    document.getElementById("p1").style.display = "block";
+}
+
+function mouseOut1() {
+    document.getElementById("p1").style.display = "none";
+}
+
+Оваа функција е искористена за сликите во сегментот Настани. Начинот на работа е едноставен, кога со курсорот ќе се оди на некоја слика се појавува текст кој ја опишуваа таа слика. Важно е да се напомени дека е применета и кај текстовите што се појавуваат, бидејќи во случај кога ќе се појави текстот тој се наоѓа над сликата и веќе курсорот не се смета дека е над сликата што предизвикува текстот постојано да се прикажува и исчезнува.
+
+function setheight() {
+    var divHeight = document.getElementById('ss1').offsetHeight;
+    document.getElementById('p1').style.height = (0.68 * divHeight) + 'px';
+    document.getElementById('p2').style.height = (0.68 * divHeight) + 'px';
+    document.getElementById('p3').style.height = (0.68 * divHeight) + 'px';
+}
+setInterval(setheight,1);
+
+Оваа функција е искористена за динамичко поставување на висина на текст кутиите кои се појавувват над сликите. Бидејќи големините на сликите се пропорционални со страната, потребно беше величините на текстовите да бидат пропорцонлани со сликите. Затоа оваа функција ја пресметува должината на сликата, и според тоа ја поставува должината на текстот.
+
+function displayNextImage1() {
+        x = (x === images.length - 1) ? 0 : x + 1;
+        document.getElementById("s1").src = images[x];
+    }
+function startTimer() {
+        mt1 = setInterval(displayNextImage1, f);
+        mt2 = setInterval(displayNextImage2, f);
+        mt3 = setInterval(displayNextImage3, f);
+    }
+function display1() {
+        temp1=document.getElementById("s1").src;
+        document.getElementById("s1").src = document.getElementById("s2").src;
+        document.getElementById("s2").src = temp1;
+        clearInterval(mt1);
+        clearInterval(mt2);
+        clearInterval(mt3);
+        startTimer();
+    }
+
+Овие функции се применети во сегментот за Студентски активности. Функцијата displayNextImage автоматски ги ротира сликите со помош на функцијата startTimer која со помош на setInterval работи на сеои 5s. Функцијата display е искористена за on-click на двете странични слики, така што при кликнување на една од тие слики, таа слика доаѓа на местото на главната слика, а исто така и се ресетира тајмерот такашто следната слика ќе дојде за 5s.
+
+function text(){
+        if(document.getElementById("s1").src == sss1)
+        {
+            document.getElementById("n1").style.display = "inline";
+            document.getElementById("n2").style.display = "none";
+            document.getElementById("n3").style.display = "none";
+        }else{
+            if(document.getElementById("s1").src == sss2)
+            {
+                document.getElementById("n1").style.display = "none";
+                document.getElementById("n2").style.display = "inline";
+                document.getElementById("n3").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("n1").style.display = "none";
+                document.getElementById("n2").style.display = "none";
+                document.getElementById("n3").style.display = "inline";
+            }
+        }
+    }
+
+Оваа функција е искористена за да проверува која слика е на главната позиција и според тоа одлучува кој е соодветниот текст што треба да се прикажи.

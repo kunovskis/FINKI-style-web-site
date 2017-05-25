@@ -1,0 +1,1 @@
+﻿web stranicata moze samo da se otvori i istrazuva samo preku HTML editor ( kako WebStorm) bidejki samite prebaruvaci ne dozoluvaat da se otvora angular js preku nadvoresni (lokalni) fajlovi.

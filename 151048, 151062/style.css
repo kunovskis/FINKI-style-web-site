@@ -1,0 +1,286 @@
+body{
+    background: white;
+    margin: 0;
+    font-family: "Helvetica";
+}
+#nav1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+#nav1 li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+#nav1 li{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#nav1 li:hover{
+    background-color: black;
+}
+
+#nesto{
+    padding-top: 2%;
+    background-color: #fbfbf9;
+    color: red;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 2%;
+    font-style: italic;
+}
+#f1{
+    position: absolute;
+    margin-top: -1.35%;
+    width: 12%;
+    margin-left: -20%;
+}
+#eden{
+    width: 100%;
+    padding-bottom: 3%;
+    background-color: lightgray;
+}
+#naslov{
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: rgb(0, 80, 255);
+    padding-top: 40px;
+    margin-bottom: -7%;
+}
+#slika1{
+    margin-left: 10%;
+    margin-top: -5%;
+    position: relative;
+}
+#s1{
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 10%;
+}
+#s2{
+    border-radius: 5px;
+    margin-top: 11%;
+    position: absolute;
+    width: 22.5%;
+    margin-bottom: 25%;
+    margin-left: 5%;
+}
+#s3{
+    border-radius: 5px;
+    position: absolute;
+    width: 22.5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 23%;
+}
+#slika1 h2 {
+    margin-top: 10%;
+    position: absolute;
+    top: 22.5%;
+    left: 0;
+    font-size: 100%;
+    width: 50%;
+}
+#slika1 h2 span {
+    color: white;
+    font: bold 1.5vmax/3vmax Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+#dva{
+    padding-bottom: 2.5%;
+    background-color: #fbfbf9;
+}
+#q{
+    padding-top: 2%;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 80, 255);
+    letter-spacing: 2px;
+}
+#n2{
+    display: none;
+}
+#n3{
+    display: none;
+}
+#ss1, #ss2, #ss3{
+    margin-top: 3%;
+    width: 23%;
+    margin-left: 7.75%;
+}
+#p1, #p2, #p3{
+    display: none;
+    margin-top: -26%;
+    position: absolute;
+    width: 22.5%;
+    left: 8%;
+    color: white;
+    font: bold 1.25vmax/1.5vmax Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 80, 255, 0.5);
+    text-align: center;
+}
+#p2 {
+    left: 39%;
+}
+#p3{
+    left: 70%;
+}
+form{
+    margin-left: 5%;
+    position: absolute;
+}
+#cetiri{
+    background-color: #fbfbf9;
+    padding-bottom: 2.5%;
+}
+#contact{
+    font-size: 1vmax;
+    padding-top: 2%;
+    margin-left: 20%;}
+#map{
+    margin-top: -2%;
+    margin-left: 57.5%;
+}
+#nav2{
+    position: absolute;
+    list-style: none;
+    margin-left: 0.2%;
+    padding-left: 0;
+    border-radius: 5px;
+    background-color: gray;
+    width: 10%;
+}
+#nav2 li{
+    margin-left: 0;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid white;
+}
+#nav2 a{
+    text-decoration: none;
+    font-size: 1.25vmax;
+    color: white;
+}
+#nav2 li:hover{
+    background: rgb(0, 80, 255);
+    color: white;
+}
+#pri{
+    background-color: white;
+    margin-left: 15%;
+    margin-right: 30%;
+    margin-top: 3.5%;
+    height: 20vmax;
+    font-size: 1.25vmax;
+    display: block;
+}
+#skola{
+    margin-top: 1%;
+    background-color: white;
+    font-weight: normal;
+    margin-bottom: 2.5%;
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgb(0, 80, 255);
+    font-size: 40px;
+}
+#foot{
+    background-color: #333;
+    color: rgb(0, 80, 255);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-align: center;
+    line-height: 25px;
+}
+#logo{
+    position: absolute;
+    width: 2%;
+    margin-left: 20%;
+    margin-top: 1.5%;
+}
+#logo:hover{
+    margin-top: 1%;
+    margin-left: 19.5%;
+    width: 3%;
+}
+#ben{
+    position: absolute;
+    margin-top: -2.5%;
+    width: 22.5%;
+    margin-left: 70%;
+}
+#fb{
+    position: absolute;
+    width: 2%;
+    margin-left: 24%;
+    margin-top: 1.5%;
+}
+#fb:hover{
+    margin-top: 1%;
+    width: 3%;
+    margin-left: 23.5%;
+}
+#twitter{
+    width: 2%;
+    position: absolute;
+    margin-left: 28%;
+    margin-top: 1.5%;
+}
+#twitter:hover{
+    margin-top: 1%;
+    width: 3%;
+    margin-left: 27.5%;
+}
+#arrow{
+    position: fixed;
+    top: 80%;
+    right: 0;
+    width: 2.5%;
+    cursor: pointer;
+}
+#in{
+    position: absolute;
+    width: 2%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+#in:hover{
+    width: 3%;
+    margin-top: 4.5%;
+    margin-left: 19.5%;
+}
+#yt{
+    position: absolute;
+    width: 2%;
+    margin-top: 5%;
+    margin-left: 24%;
+}
+#yt:hover{
+    width: 3%;
+    margin-top: 4.5%;
+    margin-left: 23.5%;
+}
+#f{
+    position: absolute;
+    width: 3%;
+    margin-top: 5%;
+    margin-left: 27.5%;
+}
+#f:hover{
+    width: 4%;
+    margin-top: 4.5%;
+    margin-left: 27%;
+}
